@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InfiniteMath</title>
+    <title>Infinite Math | Learn mathematics and analytical geometry</title>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+      rel="stylesheet"
+    />
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="font-newsreader">
+    <%= render "shared/navbar"%>
+
+    <main class="container mx-auto mt-4 px-2">
       <%= yield %>
     </main>
+
+    <%= render "shared/footer" %>
   </body>
 </html>
