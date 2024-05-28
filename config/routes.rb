@@ -12,4 +12,13 @@ Rails.application.routes.draw do
   get 'obtener_study_units', to: 'study_branches#study_units'
 
   resources :study_units
+
+  resources :calculators, only: %i[index show] do
+    collection do
+      get 'sum'
+      get 'subtract'
+      get 'multiply'
+      get 'divide'
+    end
+  end
 end
