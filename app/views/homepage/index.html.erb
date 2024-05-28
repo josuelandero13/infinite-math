@@ -2,7 +2,9 @@
 <section class="flex flex-col md:flex-row items-center justify-center">
   <div class="w-full pt-48 flex justify-center">
     <div>
-      <h2 class="text-6xl italic text-black text-center md:text-center">Bienvenido a Infinite Math</h2>
+      <h2 class="text-6xl italic text-black text-center md:text-center">
+        Bienvenido a Infinite Math
+      </h2>
       <p class="text-3xl text-black mt-4 text-center md:text-center">
         Aprende y practica conceptos matemáticos avanzados de una manera interactiva y dinámica.
       </p>
@@ -31,13 +33,33 @@
       Empezar
     </button>
 
-    <div
-      id="myModal"
-      class="fixed inset-0 bg-black bg-opacity-50 hidden"
-    >
+    <div id="myModal" class="fixed inset-0 bg-black bg-opacity-50 hidden" data-controller="study-select">
       <div class="flex items-center justify-center w-full h-full">
         <div class="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full">
-          <h2 class="text-2xl font-bold mb-4">Matemáticas</h2>
+          <%= form_with url: study_branches_general_path, method: :get, local: true do |form| %>
+            <h2 class="text-2xl font-bold mb-4"><%= @course.name %></h2>
+            <div class="mb-4">
+              <%= form.label :rama, class: "block text-gray-700" %>
+
+              <%= form.select :study_branch_id, options_for_select(
+                                  StudyBranch.all.map { |branch| [branch.name, branch.id] }
+                                ),
+                                { data: { action: "change->study-select#fetchStudyUnits"},
+                                  class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-200" } %>
+
+              <%= form.label :study_unit, class: "block text-gray-700" %>
+              <%= form.select :study_unit_id, options_for_select([]),
+                              { id: "study_unit_select",
+                                data: { target: "study-select.studyUnitSelect" },
+                                class: "mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-200" } %>
+            </div>
+
+            <button type="button" id="closeModal" data-action="modal#closeModal" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 mr-2">
+              Cerrar
+            </button>
+
+            <%= form.submit "Ir..", class: "bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" %>
+          <% end %>
         </div>
       </div>
     </div>

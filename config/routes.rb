@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
   root 'homepage#index'
+
+  resources :study_branches
+  get 'study_branches_general', to: 'study_branches#mostrar_studys_branches'
+  get 'obtener_study_units', to: 'study_branches#study_units'
+
+  resources :study_units
 end

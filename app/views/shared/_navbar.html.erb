@@ -1,10 +1,12 @@
 
 <header class="bg-white text-green-900">
   <nav class="container mx-auto flex justify-between items-center p-8">
-    <h1 class="text-5xl">Infinite Math</h1>
+    <%= link_to 'Infinite Math', root_path, class: 'text-5xl' %>
     <div class="flex space-x-2">
-      <a href="#" class="p-4 bg-green-900 rounded text-white">Iniciar Sesión</a>
-      <a href="#" class="p-4 bg-green-900 rounded text-white">Registrarse</a>
+      <%= link_to 'Ramas de estudio', study_branches_path, class: 'p-4 bg-white text-black text-2xl hover:underline' %>
+      <%= link_to 'Unidades de estudio', study_units_path, class: 'p-4 bg-white text-black text-2xl hover:underline' %>
+      <a href="#" class="block p-4 bg-green-900 rounded-md text-white text-center mt-1">Iniciar Sesión</a>
+      <a href="#" class="block p-4 bg-green-900 rounded-md text-white text-center mt-1">Registrarse</a>
     </div>
   </nav>
 </header>

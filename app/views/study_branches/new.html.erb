@@ -1,0 +1,23 @@
+<div class="p-8">
+  <%= form_with model: @study_branch do |form| %>
+    <% @study_branch&.errors&.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :course %><br>
+      <%= form.select :course_id, options_for_select(
+        Course.all.map { |branch| [branch.name, branch.id] }
+      ), class: "mt-1 block w-full border border-gray-300 rounded-md
+                shadow-sm focus:ring focus:ring-blue-200" %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

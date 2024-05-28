@@ -1,0 +1,8 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+unidad1:
+  unit_number: 1
+  name: Vectores
+  study_branch: geometria
+
+

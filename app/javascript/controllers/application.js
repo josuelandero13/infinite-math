@@ -6,4 +6,8 @@ const application = Application.start()
 application.debug = false
 window.Stimulus   = application
 
+import { Alert } from "tailwindcss-stimulus-components"
+application.register('alert', Alert)
+
+
 export { application }
