@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   root 'homepage#index'
 
   resources :study_branches
-  get 'study_branches_general', to: 'study_branches#mostrar_studys_branches'
-  get 'obtener_study_units', to: 'study_branches#study_units'
+  get 'study_branches_general', to: 'study_branches#theory_study_branch'
+  post 'study_units', to: 'study_branches#study_units'
 
   resources :study_units
 
@@ -21,4 +21,6 @@ Rails.application.routes.draw do
       get 'divide'
     end
   end
+
+  post 'calculate_derivative', to: 'calculators#calculate'
 end

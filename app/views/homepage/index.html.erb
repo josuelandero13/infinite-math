@@ -13,93 +13,9 @@
 </section>
 
 <section class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-20">
-  <div
-    data-controller="modal"
-    class="bg-stone-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-  >
-    <h3 class="text-xl font-semibold text-gray-800">Teoría</h3>
-    <p class="text-gray-600 mt-2">
-      Aprende los conceptos básicos y avanzados de matemáticas y geometría
-      analítica.
-    </p>
-    <button
-      id="openModal"
-      data-action="modal#showModal"
-      type="button"
-      class="bg-green-900 rounded text-white mt-4 px-4 py-2"
-    >
-      Empezar
-    </button>
+  <%= render 'concepts' %>
 
-    <div
-      id="myModal"
-      class="fixed inset-0 bg-black bg-opacity-50 hidden"
-      data-controller="study-select"
-    >
-      <div class="flex items-center justify-center w-full h-full">
-        <div class="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full">
-          <%= form_with url: study_branches_general_path, method: :get, local:
-          true do |form| %>
-          <h2 class="text-2xl font-bold mb-4"><%= @course.name %></h2>
-          <div class="mb-4">
-            <%= form.label :rama, class: "block text-gray-700" %> <%=
-            form.select :study_branch_id, options_for_select(
-            StudyBranch.all.map { |branch| [branch.name, branch.id] } ), { data:
-            { action: "change->study-select#fetchStudyUnits"}, class: "mt-1
-            block w-full border border-gray-300 rounded-md shadow-sm focus:ring
-            focus:ring-blue-200" } %> <%= form.label :study_unit, class: "block
-            text-gray-700" %> <%= form.select :study_unit_id,
-            options_for_select([]), { id: "study_unit_select", data: { target:
-            "study-select.studyUnitSelect" }, class: "mt-1 block w-full border
-            border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-200"
-            } %>
-          </div>
+  <%= render 'calculators' %>
 
-          <button
-            type="button"
-            id="closeModal"
-            data-action="modal#closeModal"
-            class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 mr-2"
-          >
-            Cerrar
-          </button>
-
-          <%= form.submit "Ir..", class: "bg-blue-600 text-white px-4 py-2
-          rounded hover:bg-blue-700" %> <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div
-    class="bg-stone-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-  >
-    <h3 class="text-xl font-semibold text-gray-800">Calculadoras</h3>
-    <p class="text-gray-600 mt-2">
-      Practica con problemas y ejercicios para mejorar tus habilidades.
-    </p>
-    <button
-      id="openModal"
-      type="button"
-      class="bg-green-900 rounded text-white mt-4 px-4 py-2"
-    >
-      <%= link_to "Empezar", calculators_path, class: 'link' %>
-    </button>
-  </div>
-
-  <div
-    class="bg-stone-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-  >
-    <h3 class="text-xl font-semibold text-gray-800">Graficos</h3>
-    <p class="text-gray-600 mt-2">
-      Digite ecuaciones geometricas y grafique sus planos.
-    </p>
-    <button
-      id="openModal"
-      type="button"
-      class="bg-green-900 rounded text-white mt-4 px-4 py-2"
-    >
-      Empezar
-    </button>
-  </div>
+  <%= render 'graphics' %>
 </section>

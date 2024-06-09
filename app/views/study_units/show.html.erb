@@ -17,6 +17,8 @@
 
   <div class="mt-6 flex space-x-4">
     <%= link_to "Editar", edit_study_unit_path(@study_unit), class: "border-2 p-2 rounded" %>
-    <%= link_to "Eliminar", study_unit_path(@study_unit), data: { turbo_method: :delete, turbo_confirm: "¿Estás seguro?" }, class: "text-red-600 border-2 p-2 rounded" %>
+    <%= link_to "Eliminar", study_unit_path(@study_unit),
+                            data: { turbo_method: :delete, turbo_confirm: "¿Estás seguro?" },
+                            class: "text-red-600 border-2 p-2 rounded" %>
   </div>
 </div>

@@ -3,14 +3,15 @@ class StudyBranchesController < ApplicationController
     @studys_branches = StudyBranch.all
   end
 
-  def mostrar_studys_branches
+  def theory_study_branch
     @study_branch = StudyBranch.find(params[:study_branch_id])
     @study_units = StudyUnit.where(id: params[:study_unit_id])
   end
 
   def study_units
-    study_branch = StudyBranch.find(params[:study_branch_id])
-    study_units = study_branch.study_units
+    study_units = StudyUnit.where(
+      study_branch_id: params[:study_branch_id]
+    ).pluck(:id, :name)
 
     render json: study_units
   end

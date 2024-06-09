@@ -1,0 +1,32 @@
+<form
+  id="derivative-form"
+  data-controller="derivative"
+  data-action="submit->derivative#calculateDerivative"
+>
+  <div class="mb-4">
+    <label
+      for="expression"
+      class="block text-gray-700 text-sm font-bold mb-2"
+    >
+      Expresión:
+    </label>
+    <input
+      data-target-expression="expression"
+      type="text"
+      id="expression"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
+             leading-tight focus:outline-none focus:shadow-outline">
+  </div>
+  <div class="mb-4">
+    <button
+      type="submit"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2
+             px-4 rounded focus:outline-none focus:shadow-outline"
+    >
+      Calcular Derivada
+    </button>
+  </div>
+</form>
+
+<div id="result" class="mt-4 p-4 bg-gray-100 rounded shadow"></div>
+

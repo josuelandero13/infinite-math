@@ -1,0 +1,53 @@
+<div data-controller="calculator" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+  <input
+    type="number"
+    data-calculator-target="number1"
+    class="border-2 border-gray-300 p-2 mb-2 w-full rounded-md
+           focus:outline-none focus:border-blue-500"
+    placeholder="Número 1"
+  />
+  <input
+    type="number"
+    data-calculator-target="number2"
+    class="border-2 border-gray-300 p-2 mb-4 w-full rounded-md
+           focus:outline-none focus:border-blue-500"
+    placeholder="Número 2"
+  />
+  <div class="flex justify-between">
+    <button
+      data-action="click->calculator#sum"
+      class="btn-operation bg-blue-500 hover:bg-blue-700 text-white
+             font-bold py-2 px-4 rounded-md focus:outline-none"
+    >
+      Sumar
+    </button>
+    <button
+      data-action="click->calculator#subtract"
+      class="btn-operation bg-red-500 hover:bg-red-700 text-white
+             font-boldpy-2 px-4 rounded-md focus:outline-none"
+    >
+      Restar
+    </button>
+    <button
+      data-action="click->calculator#multiply"
+      class="btn-operation bg-green-500 hover:bg-green-700 text-white
+             font-bold py-2 px-4 rounded-md focus:outline-none"
+    >
+      Multiplicar
+    </button>
+    <button
+      data-action="click->calculator#divide"
+      class="btn-operation bg-yellow-500 hover:bg-yellow-700 text-white
+             font-bold py-2 px-4 rounded-md focus:outline-none"
+    >
+      Dividir
+    </button>
+  </div>
+  <div class="mt-4">
+    <p class="text-lg font-bold">Resultado:</p>
+    <p
+      data-calculator-target="result"
+      class="text-xl font-bold bg-gray-100 p-2 rounded-md"
+    ></p>
+  </div>
+</div>
