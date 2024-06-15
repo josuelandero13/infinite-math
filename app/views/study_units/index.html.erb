@@ -1,23 +1,10 @@
-<%= link_to 'Agregar rama de unidad de estudio', new_study_unit_path, class: 'text-2xl p-8 font-bold hover:underline' %>
+<%=
+  link_to t(".title_create"), new_study_unit_path,
+    class: 'text-2xl p-8 font-bold hover:underline'
+%>
 
 <div class="p-4">
   <section class="bg-white shadow-md rounded-lg p-6">
-    <% @study_units.each do |study_unit| %>
-      <div class="mb-4 border-b pb-4">
-        <%= link_to study_unit_path(study_unit), class: 'link' do %>
-          <span class="block text-lg font-semibold text-gray-700">
-            <%= study_unit.name %>
-          </span>
-        <% end %>
-
-        <span class="block text-sm text-gray-500">
-          Number unit: <%= study_unit.unit_number %>
-        </span>
-
-        <span class="block text-sm text-gray-500">
-          Study branch ID: <%= study_unit.study_branch_id %>
-        </span>
-      </div>
-    <% end %>
+    <%= render partial: "unit", collection: @study_units %>
   </section>
 </div>

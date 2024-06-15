@@ -2,10 +2,11 @@
   class="bg-stone-100 p-6 rounded-lg shadow-md hover:shadow-lg
          transition-shadow duration-300"
 >
-  <h3 class="text-xl font-semibold text-gray-800">Calculadoras</h3>
+  <h3 class="text-xl font-semibold text-gray-800">
+    <%= t(".title") %>
+  </h3>
   <p class="text-gray-600 mt-2">
-    Obten tus resultados de problemas y ecuaciones matematicas atraves
-    de diferentes calculadoras matematicas.
+    <%= t(".introduction") %>
   </p>
   <div class="mt-5">
     <button
@@ -13,7 +14,7 @@
       type="button"
       class="bg-green-900 rounded text-white mt-4 px-4 py-2"
     >
-      <%= link_to "Empezar", calculators_path %>
+      <%= link_to t("modules_button"), calculators_path %>
     </button>
   </div>
 </div>

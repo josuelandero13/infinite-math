@@ -13,7 +13,7 @@ export default class extends Controller {
   }
 
   async fetchUnitsFromServer(studyBranchId) {
-    const response = await fetch("/study_units", {
+    const response = await fetch("/study_unit_options", {
       method: "POST",
       cache: "no-cache",
       headers: {

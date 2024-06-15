@@ -5,4 +5,17 @@ unidad1:
   name: Vectores
   study_branch: geometria
 
+unidad2:
+  unit_number: 2
+  name: Matrices
+  study_branch: geometria
 
+unidad3:
+  unit_number: 3
+  name: Ecuaciones
+  study_branch: calculo
+
+unidad4:
+  unit_number: 4
+  name: Algoritmos
+  study_branch: calculo

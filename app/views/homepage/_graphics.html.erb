@@ -1,18 +1,19 @@
 <div
-  class="bg-stone-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+  class="bg-stone-100 p-6 rounded-lg shadow-md hover:shadow-lg
+         transition-shadow duration-300"
 >
-  <h3 class="text-xl font-semibold text-gray-800">Graficos</h3>
+  <h3 class="text-xl font-semibold text-gray-800">
+    <%= t(".title") %>
+  </h3>
   <p class="text-gray-600 mt-2">
-    Digite ecuaciones geometricas y grafique sus planos atraves de las ecuaciones
-    que ingrese.
-  </p>
+    <%= t(".introduction") %>
   <div class="mt-5">
     <button
       id="openModal"
       type="button"
       class="bg-green-900 rounded text-white mt-4 px-4 py-2"
     >
-      Empezar
+      <%= t("modules_button") %>
     </button>
   </div>
 </div>

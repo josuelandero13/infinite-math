@@ -1,0 +1,15 @@
+<div class="mb-4 border-b pb-4">
+  <%= link_to study_unit_path(unit) do %>
+    <span class="block text-lg font-semibold text-gray-700">
+      <%= unit&.name %>
+    </span>
+  <% end %>
+
+  <span class="block text-sm text-gray-500">
+    <%= "#{t(".label_number_unit")}: #{unit&.unit_number}" %>
+  </span>
+
+  <span class="block text-sm text-gray-500">
+    <%= "#{t(".label_study_branch")}: #{unit&.study_branch&.name}" %>
+  </span>
+</div>

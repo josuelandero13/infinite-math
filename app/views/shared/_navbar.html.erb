@@ -1,12 +1,25 @@
-
 <header class="bg-white text-green-900">
   <nav class="container mx-auto flex justify-between items-center p-8">
-    <%= link_to 'Infinite Math', root_path, class: 'text-5xl' %>
+    <%= link_to t(".app_name"), root_path, class: "text-5xl" %>
     <div class="flex space-x-2">
-      <%= link_to 'Ramas de estudio', study_branches_path, class: 'p-4 bg-white text-black text-2xl hover:underline' %>
-      <%= link_to 'Unidades de estudio', study_units_path, class: 'p-4 bg-white text-black text-2xl hover:underline' %>
-      <a href="#" class="block p-4 bg-green-900 rounded-md text-white text-center mt-1">Iniciar Sesión</a>
-      <a href="#" class="block p-4 bg-green-900 rounded-md text-white text-center mt-1">Registrarse</a>
+      <% if Current.user %>
+        <%= link_to t(".branches_study"), study_branches_path,
+              class: "p-4 bg-white text-black text-2xl hover:underline" %>
+        <%= link_to t(".study_units"), study_units_path,
+              class: "p-4 bg-white text-black text-2xl hover:underline" %>
+      <% end %>
+
+      <% unless Current.user %>
+        <%= link_to t(".log_in"), new_session_path,
+              class: "block p-4 bg-green-900 rounded-md text-white text-center mt-1" %>
+        <%= link_to t(".sign_up"), new_user_path,
+              class: "block p-4 bg-green-900 rounded-md text-white text-center mt-1" %>
+      <% end %>
+
+      <%= link_to t(".log_out"), session_path(Current.user.id),
+            data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+            class: "block p-4 bg-green-900 rounded-md text-white text-center mt-1" if Current.user %>
+
     </div>
   </nav>
 </header>

@@ -23,5 +23,11 @@ module InfiniteMath
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # available languages
+    config.i18n.available_locales = %i[en es]
+
+    # language by defautl
+    config.i18n.default_locale = :es
   end
 end

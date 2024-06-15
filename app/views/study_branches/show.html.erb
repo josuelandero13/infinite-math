@@ -1,18 +1,17 @@
 <div class="p-4 bg-white shadow-md rounded-lg max-w-md mx-auto">
-
   <h1 class="text-2xl font-semibold text-gray-800 mb-2">
-    <%= @study_branch.name %>
+    <%= @study_branch&.name %>
   </h1>
 
   <p class="text-gray-600 mb-4">
-    <%= @study_branch.course_id %>
+    <%= @study_branch&.course&.name %>
   </p>
 
-
-  <div class="mt-6 flex space-x-4">
-    <%= link_to "Editar", edit_study_branch_path(@study_branch), class: "border-2 p-2 rounded" %>
-    <%= link_to "Eliminar", study_branch_path(@study_branch), data: {
-      turbo_method: :delete, turbo_confirm: "¿Estas seguro?"
-      }, class: "text-red-600 border-2 p-2 rounded" %>
+  <div class="my-8">
+    <%= link_to t("common.edit_button"), edit_study_branch_path(@study_branch),
+          class: "bg-gray-600 text-white px-4 py-4 rounded hover:bg-gray-700 mr-2" %>
+    <%= link_to t("common.delete_button"), study_branch_path(@study_branch),
+          data: { turbo_method: :delete, turbo_confirm: "¿Estas seguro?" },
+          class: "bg-red-700 text-white px-4 py-4 hover:bg-red-800 mr-2 rounded" %>
   </div>
 </div>

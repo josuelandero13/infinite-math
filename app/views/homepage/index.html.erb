@@ -2,20 +2,19 @@
   <div class="w-full pt-48 flex justify-center">
     <div>
       <h2 class="text-6xl italic text-black text-center md:text-center">
-        Bienvenido a Infinite Math
+        <%= t(".welcome_title") %>
       </h2>
-      <p class="text-3xl text-black mt-4 text-center md:text-center">
-        Aprende y practica conceptos matemáticos avanzados de una manera
-        interactiva y dinámica.
+      <p class="text-2xl text-black mt-4 text-center md:text-center">
+        <%= t(".welcome_message") %>
       </p>
     </div>
   </div>
 </section>
 
 <section class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-20">
-  <%= render 'concepts' %>
+  <%= render "concepts" %>
 
-  <%= render 'calculators' %>
+  <%= render "calculators" %>
 
-  <%= render 'graphics' %>
+  <%= render "graphics" %>
 </section>

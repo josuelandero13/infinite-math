@@ -3,3 +3,15 @@
 geometria:
   name: Geometria
   course: math
+
+calculo:
+  name: Calculo
+  course: math
+
+trigonometria:
+  name: Trigonometria
+  course: math
+
+estadistica:
+  name: Estadistica
+  course: math

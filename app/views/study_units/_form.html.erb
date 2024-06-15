@@ -1,0 +1,35 @@
+<div class="p-8">
+  <%= form_with model: study_unit do |form| %>
+    <% @study_unit&.errors&.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :unit_number %><br>
+      <%= form.text_field :unit_number %>
+    </div>
+
+    <div>
+      <%= form.label :study_branch %><br>
+      <%= form.select :study_branch_id,
+            options_for_select(StudyBranch.all.pluck(:name, :id)),
+            class: "mt-1 block w-full border border-gray-300 rounded-md
+                    shadow-sm focus:ring focus:ring-blue-200" %>
+    </div>
+
+    <div>
+      <%= form.label :content %><br>
+      <%= form.rich_text_area :content %>
+    </div>
+
+    <div>
+      <%= form.submit class: "bg-gray-600 text-white px-4 py-2
+                              rounded hover:bg-gray-700 mr-2 mt-6" %>
+    </div>
+  <% end %>
+</div>

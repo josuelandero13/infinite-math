@@ -1,0 +1,75 @@
+es:
+  modules_button: "Empezar"
+  title_web: "Matemáticas infinitas | Aprende matemáticas y geometría analítica."
+  common:
+    confirm: "Estas seguro?"
+    not_logged_in: 'Tienes que iniciar sesión o crear una cuenta.'
+    edit_button: "Editar"
+    delete_button: "Borrar"
+  shared:
+    navbar:
+      app_name: "Matemáticas infinitas"
+      branches_study: "Ramas de estudio"
+      study_units: "Unidades de estudio"
+      log_in: "Iniciar sesión"
+      log_out: "Cerrar sesión"
+      sign_up: "Inscribirse"
+  authentication:
+    sessions:
+      create:
+        welcome_session: "Bienvenidos a matemáticas infinitas!"
+        invalid_login: "Acceso no válido, por favor inténtalo de nuevo!"
+      destroy:
+        session_destroyed: "La session ha sido terminado."
+    users:
+      create:
+        account_created: "¡Tu cuenta ha sido creada!"
+  homepage:
+    index:
+      welcome_title: "Bienvenido a Matemáticas Infinitas"
+      welcome_message: "Aprende y practica conceptos matemáticos avanzados de una
+        manera interactiva y dinámica. A través de una interfaz intuitiva y
+        herramientas avanzadas, podrás adquirir conocimientos fundamentales
+        sobre distintas ramas de la matemática y resolver problemas de
+        manera eficiente."
+    modal_branch_filter:
+      title_modal: "Selecciona la rama y unidad de estudio que deseas aprender."
+    concepts:
+      title: "Teoría"
+      introduction: "Aprende los conceptos básicos y avanzados de matemáticas
+        y geometría analítica."
+    calculators:
+      title_modal: "Calculadoras"
+      introduction: "Obten tus resultados de problemas y ecuaciones matematicas
+        atraves de diferentes calculadoras matematicas."
+    graphics:
+      title: "Graficos (planos, circunferencias, vectores etc..)"
+      introduction: "Genera gráficos precisos para resolver problemas matemáticos
+        y ecuaciones utilizando nuestro avanzado sistema de gráficos."
+  study_units:
+    index:
+      title_create: "Crear unidad de estudio"
+    unit:
+      label_number_unit: "Numero de unidad"
+      label_study_branch: "Rama de estudio"
+    show:
+      label_number_unit: "Numero de unidad"
+      label_study_branch: "Rama de estudio"
+    create:
+      created: "La unidad de estudio se ha creado exitosamente."
+    update:
+      updated: "La unidad de estudio se ha actualizado exitosamente."
+    destroy:
+      destroyed: "La unidad de estudio se elimino exitosamente."
+  study_branches:
+    index:
+      title_create: "Crear rama de estudio"
+    branch:
+      course_label: "Curso"
+    create:
+      created: "La rama de estudio se ha creado exitosamente."
+    update:
+      updated: "La rama de estudio se actualizado exitosamente."
+    destroy:
+      destroyed: "La rama de estudio se elimino exitosamente."
+      linked_branch: "Existen unidades vinculadas a esta rama."

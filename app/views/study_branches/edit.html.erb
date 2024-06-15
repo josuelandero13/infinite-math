@@ -1,18 +1,1 @@
-<%= form_with model: @study_branch do |form| %>
-  <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :course %><br>
-    <%= form.select :course_id, options_for_select(
-      Course.all.map { |branch| [branch.name, branch.id] }
-    ), class: "mt-1 block w-full border border-gray-300 rounded-md
-              shadow-sm focus:ring focus:ring-blue-200" %>
-  </div>
-
-  <div class="mt-6 flex space-x-4">
-    <%= form.submit "Updadte study branch", class: "mt-10 border-2 p-2 rounded" %>
-  </div>
-<% end %>
+<%= render "form", study_branch: @study_branch %>

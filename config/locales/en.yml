@@ -1,31 +1,75 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  modules_button: "Begin"
+  title_web: "Infinite Math | Learn mathematics and analytical geometry"
+  common:
+    confirm: "Are you sure?"
+    not_logged_in: 'You have to login or create an account'
+    edit_button: "Edit"
+    delete_button: "Delete"
+  shared:
+    navbar:
+      app_name: "Infinite Math"
+      branches_study: "Branches of study"
+      study_units: "Study units"
+      log_in: "Log in"
+      log_out: "Log out"
+      sign_up: "Sign up"
+  authentication:
+    sessions:
+      create:
+        welcome_session: "Welcome to infinite math!"
+        invalid_login: "Invalid access, please try again!"
+      destroy:
+        session_destroyed: "The session has been terminated"
+    users:
+      create:
+        account_created: "Your account has been created!"
+  homepage:
+    index:
+      welcome_title: "Welcome to Infinite Math"
+      welcome_message: "Learn and practice advanced mathematical concepts in
+        a way interactive and dynamic. Through an intuitive interface and
+        advanced tools, you will be able to acquire fundamental knowledge
+        about different branches of mathematics and solve problems of
+        efficient manner."
+    modal_branch_filter:
+      title_modal: "Select the branch and unit of study you want to learn"
+    concepts:
+      title: "Theory"
+      introduction: "Learn the basic and advanced concepts of mathematics
+        and analytical geometry."
+    calculators:
+      title: "Calculators"
+      introduction: "Get your results for mathematical problems and equations
+        through different mathematical calculators."
+    graphics:
+      title: "Graphics (planes, circles, vectors, etc.)"
+      introduction: "Generate accurate graphs to solve math problems and
+        equations using our advanced graphing system."
+  study_units:
+    index:
+      title_create: "Create study unit"
+    unit:
+      label_number_unit: "Unit number"
+      label_study_branch: "Study branch"
+    show:
+      label_number_unit: "Unit number"
+      label_study_branch: "Study branch"
+    create:
+      created: "The study unit has been created successfully."
+    update:
+      updated: "The study unit has been successfully updated."
+    destroy:
+      destroyed: "The study unit was successfully deleted."
+  study_branches:
+    index:
+      title_create: "Create branch of study"
+    branch:
+      course_label: "Course"
+    create:
+      created: "The study branch has been created successfully."
+    update:
+      updated: "The study branch has been successfully updated."
+    destroy:
+      destroyed: "The study branch was successfully deleted."
+      linked_branch: "There are units linked to this branch."

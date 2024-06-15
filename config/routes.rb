@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :study_branches
   get 'study_branches_general', to: 'study_branches#theory_study_branch'
-  post 'study_units', to: 'study_branches#study_units'
+  post 'study_unit_options', to: 'study_branches#study_unit_options'
 
   resources :study_units
 
@@ -23,4 +23,9 @@ Rails.application.routes.draw do
   end
 
   post 'calculate_derivative', to: 'calculators#calculate'
+
+  namespace :authentication, path: '', as: '' do
+    resources :users, only: %i[new create]
+    resources :sessions, only: %i[new create destroy]
+  end
 end
