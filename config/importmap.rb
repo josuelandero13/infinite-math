@@ -10,3 +10,5 @@ pin 'tailwindcss-stimulus-components' # @5.1.1
 pin '@hotwired/stimulus', to: '@hotwired--stimulus.js' # @3.2.2
 pin 'trix'
 pin '@rails/actiontext', to: 'actiontext.esm.js'
+pin 'chart.js', to: 'https://ga.jspm.io/npm:chart.js@4.4.1/dist/chart.js'
+pin '@kurkle/color', to: 'https://ga.jspm.io/npm:@kurkle/color@0.3.2/dist/color.esm.js'

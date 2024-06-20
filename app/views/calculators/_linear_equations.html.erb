@@ -1,0 +1,56 @@
+<form
+  data-controller="linear-equation"
+  data-action="submit->linear-equation#solve"
+  class="space-y-4"
+>
+  <div id="equations" data-linear-equation-target="equations" class="space-y-4">
+    <div class="equation" data-linear-equation-target="equation">
+      <label for="a" class="block text-sm font-medium text-gray-700"
+        >Coeficiente a:</label
+      >
+      <input
+        type="number"
+        name="a[]"
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+        required
+      />
+      <label for="b" class="block text-sm font-medium text-gray-700"
+        >Coeficiente b:</label
+      >
+      <input
+        type="number"
+        name="b[]"
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+        required
+      />
+      <label for="c" class="block text-sm font-medium text-gray-700"
+        >Constante c:</label
+      >
+      <input
+        type="number"
+        name="c[]"
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+        required
+      />
+    </div>
+  </div>
+  <div>
+    <button
+      type="button"
+      data-action="linear-equation#addEquation"
+      class="px-4 py-2 bg-green-500 text-white rounded-md"
+    >
+      Agregar otra ecuación
+    </button>
+  </div>
+  <div>
+    <button
+      type="submit"
+      class="px-4 py-2 bg-blue-500 text-white rounded-md">
+      Resolver
+    </button>
+  </div>
+</form>
+
+<div id="results" class="mt-4 text-lg"></div>
+<canvas id="resultsChart" width="400" height="400"></canvas>

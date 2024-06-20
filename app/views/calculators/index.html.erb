@@ -27,3 +27,18 @@
     <%= render partial: 'derivative_calculator' %>
   </div>
 </div>
+
+<div data-controller="calculator-visibility">
+  <div class="bg-gray-50 text-2xl font-bold text-center mb-8 hover:bg-green-200">
+    <button
+      data-action="calculator-visibility#toggleLinearEquationsVisibility"
+      class="text-black font-bold py-2 px-4 rounded-md"
+    >
+      Calculadora de Ecuaciones Lineales en Dos Variables
+    </button>
+  </div>
+
+  <div id="linear_equations" class="hidden max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <%= render partial: 'linear_equations' %>
+  </div>
+</div>

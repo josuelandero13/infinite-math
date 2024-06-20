@@ -11,12 +11,16 @@
       <a class="transition-transform transform hover:scale-110">
         <%= image_tag "icons/instagram_icon", alt: "Instagram", class: "w-10 h-10" %>
       </a>
-      <a class="transition-transform transform hover:scale-110">
-        <%= image_tag "icons/linkedin_icon", alt: "Linkedin", class: "w-10 h-10" %>
-      </a>
-      <a class="transition-transform transform hover:scale-110">
+      <%= link_to "https://www.linkedin.com/in/josue-augusto-landero-44015a230/",
+            target: "_blank", rel: "noopener noreferrer",
+            class: "transition-transform transform hover:scale-110" do %>
+         <%= image_tag "icons/linkedin_icon", alt: "Linkedin", class: "w-10 h-10" %>
+      <% end %>
+      <%= link_to "https://x.com/jlandero13",
+            target: "_blank", rel: "noopener noreferrer",
+            class: "transition-transform transform hover:scale-110" do %>
         <%= image_tag "icons/twitter_icon", alt: "Twitter", class: "w-10 h-10" %>
-      </a>
+      <% end %>
       <a class="transition-transform transform hover:scale-110">
         <%= image_tag "icons/youtube_icon", alt: "Youtube", class: "w-10 h-10" %>
       </a>

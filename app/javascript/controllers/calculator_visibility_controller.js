@@ -9,6 +9,10 @@ export default class extends Controller {
     this.toggleVisibilityById("derivative_calculator");
   }
 
+  toggleLinearEquationsVisibility() {
+    this.toggleVisibilityById("linear_equations");
+  }
+
   toggleVisibilityById(elementId) {
     const element = document.getElementById(elementId);
 
