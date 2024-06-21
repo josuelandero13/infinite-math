@@ -1,0 +1,33 @@
+<div class="p-8">
+  <%= form_with model: exercise do |form| %>
+    <% @exercise&.errors&.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+
+    <div class="mb-5">
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </div>
+
+     <div class="mb-5">
+      <%= form.label :content %><br>
+      <%= form.rich_text_area :content %>
+    </div>
+
+     <div class="mb-5">
+      <%= form.label :correct_answer %><br>
+      <%= form.text_field :correct_answer %>
+    </div>
+
+    <div class="mb-5">
+      <%= form.label :study_unit_id %><br>
+      <%= form.number_field :study_unit_id,
+          value: params[:study_unit_id], readonly: true %>
+    </div>
+
+    <div>
+      <%= form.submit class: "bg-gray-600 text-white px-4 py-2
+                              rounded hover:bg-gray-700 mr-2 mt-6" %>
+    </div>
+  <% end %>
+</div>

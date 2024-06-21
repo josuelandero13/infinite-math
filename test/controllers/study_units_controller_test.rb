@@ -7,6 +7,7 @@ class StudyUnitsControllerTest < ActionDispatch::IntegrationTest
     @geometria = study_branches(:geometria)
     @unidad1 = study_units(:unidad1)
     @unidad2 = study_units(:unidad2)
+    @unidad3 = study_units(:unidad3)
   end
 
   test 'should get index' do
@@ -69,7 +70,7 @@ class StudyUnitsControllerTest < ActionDispatch::IntegrationTest
 
   test 'can delete study unit' do
     assert_difference('StudyUnit.count', -1) do
-      delete study_unit_path(@unidad1)
+      delete study_unit_path(@unidad3)
     end
 
     assert_redirected_to study_units_path

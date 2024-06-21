@@ -6,4 +6,5 @@ class StudyUnit < ApplicationRecord
   }
 
   belongs_to :study_branch
+  has_many :exercises
 end

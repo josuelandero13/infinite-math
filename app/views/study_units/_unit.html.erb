@@ -1,15 +1,16 @@
-<div class="mb-4 border-b pb-4">
-  <%= link_to study_unit_path(unit) do %>
+<%= link_to study_unit_path(unit) do %>
+  <div class="p-6 bg-white shadow-md rounded-lg transition
+              transform hover:shadow-lg hover:scale-105 mb-4">
     <span class="block text-lg font-semibold text-gray-700">
       <%= unit&.name %>
     </span>
-  <% end %>
 
-  <span class="block text-sm text-gray-500">
-    <%= "#{t(".label_number_unit")}: #{unit&.unit_number}" %>
-  </span>
+    <span class="block text-sm text-gray-500">
+      <%= "#{t(".label_number_unit")}: #{unit&.unit_number}" %>
+    </span>
 
-  <span class="block text-sm text-gray-500">
-    <%= "#{t(".label_study_branch")}: #{unit&.study_branch&.name}" %>
-  </span>
-</div>
+    <span class="block text-sm text-gray-500">
+      <%= "#{t(".label_study_branch")}: #{unit&.study_branch&.name}" %>
+    </span>
+  </div>
+<% end %>

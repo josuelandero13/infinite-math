@@ -49,6 +49,10 @@ es:
   study_units:
     index:
       title_create: "Crear unidad de estudio"
+    form:
+      text_add_exercise: "Añadir ejercicio"
+    show_exercises:
+      title_show_exercises: "Ejercicios"
     unit:
       label_number_unit: "Numero de unidad"
       label_study_branch: "Rama de estudio"
@@ -73,3 +77,20 @@ es:
     destroy:
       destroyed: "La rama de estudio se elimino exitosamente."
       linked_branch: "Existen unidades vinculadas a esta rama."
+    exercise:
+      submit_answer: "Enviar respuesta"
+      label_response: "Tu respuesta"
+    response_modal:
+      response: "Respuesta"
+      close_button: "Cerrar"
+  exercises:
+    show:
+      label_correct_answer: "Respuesta correcta"
+      label_study_unit: "Unidad de estudio"
+    update:
+      updated: "El ejercicio se ha actualizado correctamente.
+        Consultar los datos en la unidad de estudio."
+    create:
+      created: "El ejercicio se ha creado con éxito. Consulta la unidad de estudio."
+    destroy:
+      destroyed: "El ejercicio se ha eliminado correctamente."

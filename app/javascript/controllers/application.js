@@ -9,5 +9,4 @@ window.Stimulus   = application
 import { Alert } from "tailwindcss-stimulus-components"
 application.register('alert', Alert)
 
-
 export { application }

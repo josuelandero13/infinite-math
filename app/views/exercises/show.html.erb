@@ -1,0 +1,33 @@
+<div class="p-4 bg-white shadow-md rounded-lg w-full">
+  <h1 class="text-2xl font-semibold text-gray-800 mb-2">
+    <%= @exercise.title %>
+  </h1>
+
+  <div class="mb-2">
+    <span class="text-gray-600">
+      <%= "#{t(".label_correct_answer")}: #{@exercise.correct_answer}" %>
+    </span>
+  </div>
+
+  <div class="mb-2">
+    <span class="text-gray-600">
+      <%= "#{t(".label_study_unit")}: #{@exercise.study_unit.name}" %>
+    </span>
+  </div>
+
+  <div class="mb-4 mt-5 max-h-40 overflow-y-auto">
+    <p class="text-gray-600">
+      <%= @exercise.content %>
+    </p>
+  </div>
+
+  <div class="my-8">
+    <%= link_to t("common.edit_button"), edit_exercise_path(
+          @exercise, study_unit_id: @exercise.study_unit.id
+        ), class: "bg-gray-600 text-white px-4 py-4 rounded hover:bg-gray-700 mr-2" %>
+
+    <%= link_to t("common.delete_button"), exercise_path(@exercise),
+          data: { turbo_method: :delete, turbo_confirm: "¿Estás seguro?" },
+          class: "bg-red-700 text-white px-4 py-4 hover:bg-red-800 mr-2 rounded" %>
+  </div>
+</div>

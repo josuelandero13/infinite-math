@@ -8,7 +8,8 @@ class StudyBranchesController < ApplicationController
 
   def theory_study_branch
     @study_branch = StudyBranch.find(params[:study_branch_id])
-    @study_units = StudyUnit.where(id: params[:study_unit_id])
+    @study_unit = StudyUnit.find(params[:study_unit_id]) if params[:study_unit_id].present?
+    @exercises = Exercise.where(study_unit_id: @study_unit.id) if @study_unit.present?
   end
 
   def study_unit_options

@@ -23,3 +23,17 @@
           class: "bg-red-700 text-white px-4 py-4 hover:bg-red-800 mr-2 rounded" %>
   </div>
 </div>
+
+<div class="space-y-4 mt-6">
+  <% @study_unit.exercises.each do |exercise| %>
+    <div class="p-6 bg-white shadow-md rounded-lg transition
+                transform hover:shadow-lg hover:scale-105 mb-4">
+      <span class="text-lg font-medium text-black">
+        <%= exercise.title %>
+      </span>
+      <p class="mt-2 text-gray-700">
+        <%= exercise.content %>
+      </p>
+    </div>
+  <% end %>
+</div>

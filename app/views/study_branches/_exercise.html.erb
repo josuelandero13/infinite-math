@@ -1,0 +1,30 @@
+<h1 class="text-xl font-bold"><%= exercise.title %></h1>
+<p class="mb-4"><%= exercise.content %></p>
+
+<div
+  data-controller="exercise"
+  data-exercise-id-value="<%= exercise.id %>"
+>
+  <div class="mb-4">
+    <label class="block text-sm font-medium text-gray-700">
+      <%= t(".label_response") %>
+    </label>
+    <input
+      type="text"
+      data-exercise-target="answer"
+      class="mt-1 block w-full px-3 py-2 border border-gray-300
+             rounded-md shadow-sm focus:outline-none focus:ring-indigo-500
+             focus:border-indigo-500 sm:text-sm">
+  </div>
+  <div>
+    <button
+      type="button"
+      data-action="exercise#evaluateResponse"
+      class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 mr-2 mt-3">
+      <%= t(".submit_answer") %>
+    </button>
+  </div>
+</div>
+
+<%= render "response_modal" %>
+

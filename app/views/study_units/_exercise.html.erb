@@ -1,0 +1,11 @@
+<%= link_to exercise_path(exercise_id: exercise.id) do %>
+  <div class="p-6 bg-white shadow-md rounded-lg transition
+              transform hover:shadow-lg hover:scale-105 mb-4">
+    <span class="text-lg font-medium text-black">
+      <%= exercise.title %>
+    </span>
+    <p class="mt-2 text-gray-700">
+      <%= exercise.content %>
+    </p>
+  </div>
+<% end %>

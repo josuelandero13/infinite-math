@@ -1,7 +1,12 @@
-<%= link_to t(".title_create"), new_study_branch_path,
-      class: 'text-2xl p-8 font-bold hover:underline' %>
-
 <div class="p-6">
+  <div class="mb-4 flex justify-start">
+    <%=
+      link_to t(".title_create"), new_study_branch_path,
+      class: 'text-lg p-4 font-bold bg-green-500 text-white
+              rounded hover:bg-green-600'
+    %>
+  </div>
+
   <section class="bg-white shadow-md rounded-lg p-6">
     <%= render partial: 'branch', collection: @study_branches %>
   </section>

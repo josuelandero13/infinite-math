@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ejercicio1:
+  title: Ejercicio1
+  correct_answer: Correct answer 1
+  study_unit: unidad1
+
+ejercicio2:
+  title: Ejercicio2
+  correct_answer: Failed answer
+  study_unit: unidad1
+
+ejercicio3:
+  title: Ejercicio3
+  correct_answer: Correct answer 2
+  study_unit: unidad2
+
+ejercicio4:
+  title: Ejercicio4
+  correct_answer: Correct answer 2
+  study_unit: unidad2

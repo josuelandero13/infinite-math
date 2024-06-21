@@ -1,11 +1,12 @@
-<div class="mb-4 border-b pb-4">
-  <%= link_to study_branch_path(branch) do %>
+<%= link_to study_branch_path(branch) do %>
+  <div class="p-6 bg-white shadow-md rounded-lg transition
+              transform hover:shadow-lg hover:scale-105 mb-4">
     <span class="block text-lg font-semibold text-gray-700">
       <%= branch&.name %>
     </span>
-  <% end %>
 
-  <span class="block text-sm text-gray-500">
-    <%= "#{t(".course_label")}: #{branch.course.name}" %>
-  </span>
-</div>
+    <span class="block text-sm text-gray-500">
+      <%= "#{t(".course_label")}: #{branch.course.name}" %>
+    </span>
+  </div>
+<% end %>

@@ -6,29 +6,20 @@
   </div>
 
   <div class="p-8">
-    <% if @study_units.any? %>
-      <span class="text-2xl">
-        Unidad <%= "#{@study_units.first.unit_number} - #{@study_units.first.name}" %>
+    <% if @study_unit.present? %>
+      <span class="text-2xl font-bold">
+        Unidad <%= "#{@study_unit.unit_number} - #{@study_unit.name}" %>
       </span>
 
       <p>
-         <%= @study_units.first.content %>
+         <%= @study_unit.content %>
       </p>
+
+      <%= render partial: 'exercise', collection: @exercises %>
     <% else %>
-      <% if StudyUnit.exists?(study_branch_id: params[:study_branch_id]) %>
-
-        <p class="text-lg">Que unidad de estudio le gustaria aprender.</p>
-
-        <%=
-          select_tag(:study_unit_id, options_for_select(
-            StudyUnit.all.map { |branch| [branch.name, branch.id] }
-          ))
-        %>
-      <% else %>
-        <p class="text-2xl">
-          No hay unidades de estudios disponibles para la rama <%= "#{@study_branch.name}" %>.
-        </p>
-      <% end %>
+      <p class="text-2xl">
+        No hay unidades de estudios disponibles para la rama <%= "#{@study_branch.name}" %>.
+      </p>
     <% end %>
   </div>
 </div>

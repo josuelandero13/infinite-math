@@ -1,8 +1,19 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
+  static targets = ["branchSelect", "unitSelect"];
+
+  connect() {
+    this.triggerChangeEvent();
+  }
+
+  triggerChangeEvent() {
+    const event = new Event("change", { bubbles: true });
+    this.branchSelectTarget.dispatchEvent(event);
+  }
+
   async fetchStudyUnits(event) {
-    const studyBranchId = event.target.value;
+    const studyBranchId = this.branchSelectTarget.value;
 
     try {
       const data = await this.fetchUnitsFromServer(studyBranchId);
@@ -33,7 +44,7 @@ export default class extends Controller {
   }
 
   updateStudyUnits(units) {
-    const studyUnitSelect = document.getElementById("study_unit_select");
+    const studyUnitSelect = this.unitSelectTarget;
     const id = 0
     const name = 1
 

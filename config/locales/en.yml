@@ -49,6 +49,10 @@ en:
   study_units:
     index:
       title_create: "Create study unit"
+    form:
+      text_add_exercise: "Add exercise"
+    show_exercises:
+      title_show_exercises: "Exercises"
     unit:
       label_number_unit: "Unit number"
       label_study_branch: "Study branch"
@@ -73,3 +77,20 @@ en:
     destroy:
       destroyed: "The study branch was successfully deleted."
       linked_branch: "There are units linked to this branch."
+    exercise:
+      submit_answer: "Submit Answer"
+      label_response: "Your Answer"
+    response_modal:
+      response: "Response"
+      close_button: "Close"
+  exercises:
+    show:
+      label_correct_answer: "Correct answer"
+      label_study_unit: "Study unit"
+    update:
+      updated: "The exercise has been updated successfully.
+        Check the data in the study unit."
+    create:
+      created: "The exercise has been created successfully. Check the unit of study."
+    destroy:
+      destroyed: "The exercise has been successfully deleted."

@@ -1,6 +1,8 @@
 <div class="flex items-center justify-center w-full h-full">
   <div class="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full">
-    <%= form_with url: study_branches_general_path, method: :get, local: true do |form| %>
+    <%= form_with url: study_branches_general_path, method: :get, local: true,
+          data: { controller: "select-options" } do |form|%>
+
       <h2 class="text-2xl font-bold mb-4"><%= @course&.name %></h2>
       <p class="flex justify-center"><%= t(".title_modal") %></p>
       <div class="mb-4">
@@ -8,17 +10,18 @@
         <%=
           select_tag :study_branch_id,
             options_for_select(StudyBranch.all.map { |branch| [branch.name, branch.id] }),
-            id: "study_branch_select", data: { action: "change->select-options#fetchStudyUnits" }
+            id: "study_branch_select", data: { action: "change->select-options#fetchStudyUnits",
+                                                        "select-options-target": "branchSelect" }
         %>
         <%= form.label :study_unit, class: "block text-gray-700 mt-4" %>
         <%=
-          select_tag :study_unit_id, options_for_select([]), id: "study_unit_select"
+          select_tag :study_unit_id, options_for_select([]),
+            data: { "select-options-target": "unitSelect" }
         %>
       </div>
 
       <button
         type="button"
-        id="closeModal"
         data-action="modal#showModal"
         class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 mr-2"
       >

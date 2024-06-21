@@ -4,17 +4,17 @@
       <%= error %>
     <% end %>
 
-    <div>
+    <div class="mb-5">
       <%= form.label :name %><br>
       <%= form.text_field :name %>
     </div>
 
-    <div>
+    <div class="mb-5">
       <%= form.label :unit_number %><br>
       <%= form.text_field :unit_number %>
     </div>
 
-    <div>
+    <div class="mb-5">
       <%= form.label :study_branch %><br>
       <%= form.select :study_branch_id,
             options_for_select(StudyBranch.all.pluck(:name, :id)),
@@ -22,11 +22,12 @@
                     shadow-sm focus:ring focus:ring-blue-200" %>
     </div>
 
-    <div>
+    <div class="mb-5">
       <%= form.label :content %><br>
       <%= form.rich_text_area :content %>
     </div>
 
+    <%= render "show_exercises", study_unit: study_unit %>
     <div>
       <%= form.submit class: "bg-gray-600 text-white px-4 py-2
                               rounded hover:bg-gray-700 mr-2 mt-6" %>
