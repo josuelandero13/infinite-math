@@ -49,10 +49,9 @@ en:
   study_units:
     index:
       title_create: "Create study unit"
-    form:
-      text_add_exercise: "Add exercise"
     show_exercises:
       title_show_exercises: "Exercises"
+      text_add_exercise: "Add exercise"
     unit:
       label_number_unit: "Unit number"
       label_study_branch: "Study branch"
